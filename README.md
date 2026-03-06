@@ -10,9 +10,13 @@ All projects are console-based applications built using core Java concepts.
 Java-Internship-Projects
 │
 ├── Task-1-Online-Reservation-System
+│
 ├── Task-2-Number-Guessing-Game
+│
 ├── Task-3-ATM-Interface
+│
 ├── Task-4-Online-Examination-System
+│
 └── Task-5-Digital-Library-Management
 
 ---

@@ -28,6 +28,8 @@ public class OnlineReservationSystem {
             System.out.print("Enter your choice: ");
             int choice = sc.nextInt();
             sc.nextLine(); 
+            
+            
 
             if (choice == 1) {
 

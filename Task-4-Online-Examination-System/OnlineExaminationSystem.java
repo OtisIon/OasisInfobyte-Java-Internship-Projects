@@ -17,37 +17,62 @@ public class OnlineExamination {
         System.out.print("Enter Password: ");
         String pass = sc.nextLine();
 
-        if(user.equals(username) && pass.equals(password)) {
+        if (user.equals(username) && pass.equals(password)) {
 
-            System.out.println("Login Successful!\n");
-            System.out.println("Starting Exam...\n");
+            int choice;
 
-            int score = 0;
+            do {
 
-            System.out.println("Q1: Java is a ?");
-            System.out.println("1. Programming Language");
-            System.out.println("2. Database");
-            System.out.println("3. Operating System");
-            int ans1 = sc.nextInt();
+                System.out.println("\n1. Start Exam");
+                System.out.println("2. Change Password");
+                System.out.println("3. Logout");
 
-            if(ans1 == 1) score++;
+                System.out.print("Enter choice: ");
+                choice = Integer.parseInt(sc.nextLine());
 
-            System.out.println("\nQ2: JVM stands for ?");
-            System.out.println("1. Java Variable Machine");
-            System.out.println("2. Java Virtual Machine");
-            System.out.println("3. Java Visual Machine");
-            int ans2 = sc.nextInt();
+                if (choice == 1) {
 
-            if(ans2 == 2) score++;
+                    int score = 0;
 
-            System.out.println("\nExam Finished!");
-            System.out.println("Your Score: " + score + "/2");
+                    System.out.println("\nExam Started!");
 
-            System.out.println("Logging out...");
+                    System.out.println("\nQ1: Java is a ?");
+                    System.out.println("1. Programming Language");
+                    System.out.println("2. Database");
+                    System.out.println("3. Operating System");
+
+                    int ans1 = Integer.parseInt(sc.nextLine());
+                    if (ans1 == 1) score++;
+
+                    System.out.println("\nQ2: JVM stands for ?");
+                    System.out.println("1. Java Virtual Machine");
+                    System.out.println("2. Java Variable Machine");
+                    System.out.println("3. Java Visual Machine");
+
+                    int ans2 = Integer.parseInt(sc.nextLine());
+                    if (ans2 == 1) score++;
+
+                    System.out.println("\nExam Submitted Automatically!");
+                    System.out.println("Your Score: " + score + "/2");
+                }
+
+                else if (choice == 2) {
+
+                    System.out.print("Enter new password: ");
+                    password = sc.nextLine();
+
+                    System.out.println("Password updated successfully!");
+                }
+
+            } while (choice != 3);
+
+            System.out.println("Logged out successfully.");
         }
 
         else {
-            System.out.println("Invalid Login");
+            System.out.println("Invalid Login.");
         }
+
+        sc.close();
     }
 }
